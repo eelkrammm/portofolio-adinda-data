@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body class="bg-zinc-50">
+    <header
+      class="bg-emerald-50 sticky top-0 shadow-slate-200/50 border border-slate-100/50"
+    >
+      <nav class="flex justify-around p-3 items-center backdrop-blur-md">
+        <h1>
+          <span class="font-bold text-xl">Adinda</span>
+          <span class="font-bold etxt text-celadon-400">Portfolio</span>
+        </h1>
+        <ul class="gap-4 text-shadow-sm hidden sm:flex">
+          <li>
+            <a class="a-nav-hover" href="#about">About</a>
+          </li>
+          <li><a class="a-nav-hover" href="#skills">Skills</a></li>
+          <li><a class="a-nav-hover" href="#projects">Projects</a></li>
+          <li><a class="a-nav-hover" href="#contact">Contact</a></li>
+        </ul>
+
+        <i data-feather="menu" class="text-black flex sm:hidden"></i>
+      </nav>
+    </header>
+
+    <section
+      class="bg-emerald-50 rounded-bl-4xl rounded-br-4x px-15 py-16 flex flex-col md:flex md:flex-row items-center md:items-center justify-center gap-10 sm:gap-60"
+      id="hero"
+    >
+      <div>
+        <h2 class="text-5xl font-bold">Hello, I'm Adinda</h2>
+        <p class="text-3xl font-bold text-shamrock-400">
+          Data Analyst | Data Enthusiast
+        </p>
+        <a
+          class="inline-block mt-3 bg-emerald-200 p-3 rounded-2xl text-sm font-bold shadow-sm hover:scale-105 duration-300"
+          href="#projects"
+          >View My Work</a
+        >
+        <div class="flex gap-4 mt-5">
+          <i
+            data-feather="linkedin"
+            class="cursor-pointer drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] hover:scale-105 duration-300"
+          ></i>
+          <i
+            data-feather="instagram"
+            class="cursor-pointer drop-shadow-[0_0_8px_rgba(59,130,246,0.8)] hover:scale-105 duration-300"
+          ></i>
+          <i
+            data-feather="github"
+            class="cursor-pointer drop-shadow-[0_0_8px_rgba(59,130,246,0.8)] hover:scale-105 duration-300"
+          ></i>
+        </div>
+      </div>
+
+      <img
+        src="foto.png"
+        class="shadow-md min-w-50 h-80 object-cover rounded-tl-4xl rounded-tr-3xl rounded-br-4xl rounded-bl-sm"
+      />
+    </section>
+
+    <!-- ABOUT -->
+    <section class="bg-zinc-50 px-16 pt-5" id="about">
+      <h2 class="text-4xl text-center font-bold mb-5">About Me</h2>
+
+      <div class="flex flex-col sm:flex-row gap-10 justify-center items-center">
+        <img
+          src="foto2.jpg"
+          alt="foto-selfie-adinda"
+          class="w-50 h-70 object-cover rounded-4xl shadow-md"
+        />
+        <div class="text-justify flex flex-col gap-3.5 text-small">
+          <p>
+            Hello, my name is Adinda Puja Puspita, a fresh graduate from the
+            Actuarial Science program at Institut Teknologi Sepuluh Nopember
+            (ITS). During my studies, I learned many concepts related to
+            statistics, data analysis, and forecasting.
+          </p>
+
+          <p>
+            Through this experience, I realized that actuarial science is not
+            only about insurance but also closely related to data processing and
+            quantitative analysis. This led me to develop a strong interest in
+            the fields of data analysis and data science.
+          </p>
+
+          <p>
+            I enjoy working with data, exploring patterns, and generating
+            insights that support data-driven decision making. Recently, I have
+            also developed an interest in web technologies, which motivated me
+            to build this portfolio website myself as a platform to showcase my
+            data projects and analytical work.
+          </p>
+        </div>
+      </div>
+    </section>
+    <svg
+      class="mx-0 my-0"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+    >
+      <path
+        fill="#ebfaf1"
+        fill-opacity="1"
+        d="M0,256L360,256L720,160L1080,96L1440,128L1440,320L1080,320L720,320L360,320L0,320Z"
+      ></path>
+    </svg>
+    <svg
+      class="mx-0 my-0"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+    >
+      <path
+        fill="#ebfaf1"
+        fill-opacity="1"
+        d="M0,256L84.7,288L169.4,192L254.1,32L338.8,0L423.5,288L508.2,96L592.9,32L677.6,224L762.4,160L847.1,160L931.8,160L1016.5,192L1101.2,160L1185.9,224L1270.6,256L1355.3,64L1440,0L1440,0L1355.3,0L1270.6,0L1185.9,0L1101.2,0L1016.5,0L931.8,0L847.1,0L762.4,0L677.6,0L592.9,0L508.2,0L423.5,0L338.8,0L254.1,0L169.4,0L84.7,0L0,0Z"
+      ></path>
+    </svg>
+    <section class="flex flex-col gap-10 px-15" id="technical-skill">
+      <h2 class="text-4xl text-center font-bold">Technical Skills</h2>
+      <p class="text-small text-center">
+        Here are some of the tools and technologies I use in data analysis,
+        statistics, and web development.
+      </p>
+      <div class="flex flex-wrap gap-10 justify-center items-center">
+        <img class="w-15 h-15" src="skills/mysql.svg" alt="my-sql" />
+        <img class="w-15 h-15" src="skills/rstudioide.svg" alt="r-studio" />
+        <img class="w-15 h-15" src="skills/python.svg" alt="python" />
+        <img class="w-15 h-15" src="skills/looker.svg" alt="google-looker" />
+      </div>
+    </section>
+
+    <section
+      id="projects"
+      class="flex flex-col sm:flex-wrap justify-center items-center gap-10 p-15 bg-[url('layered-waves-haikei.png')] bg-cover bg-center"
+    >
+      <h2 class="text-4xl font-bold text-center">Projects</h2>
+      <div class="projects flex gap-5 flex-wrap">
+        <div class="project">
+          <img src="grafik_ta.png" class="rounded-sm shadow-sm h-1/2" />
+          <p
+            class="title-project text-sm font-semibold text-justify mt-3 cursor-pointer"
+          >
+            Forecasting Stock Prices in the Technology Sector using Support
+            Vector Regression
+          </p>
+          <div class="text-[10px] flex flex-row flex-wrap gap-2 items-center">
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >Microsoft Excel</span
+            >
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >R Studio</span
+            >
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >Python</span
+            >
+          </div>
+          <p
+            class="text-sm cursor-pointer font-semibold text-blue-800 hover:underline hover:underline-offset-4"
+          >
+            Read more
+          </p>
+        </div>
+        <div class="project">
+          <img src="grafik_ta.png" class="rounded-sm shadow-sm h-1/2" />
+          <p
+            class="title-project text-sm font-semibold text-justify mt-3 cursor-pointer"
+          >
+            Forecasting Stock Prices in the Technology Sector using Support
+            Vector Regression
+          </p>
+          <div class="text-[10px] flex flex-row flex-wrap gap-2 items-center">
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >Microsoft Excel</span
+            >
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >R Studio</span
+            >
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >Python</span
+            >
+          </div>
+          <p
+            class="text-sm cursor-pointer font-semibold text-blue-800 hover:underline hover:underline-offset-4"
+          >
+            Read more
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
