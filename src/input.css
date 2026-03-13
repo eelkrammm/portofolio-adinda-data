@@ -59,5 +59,5 @@
 }
 
 .project {
-  @apply bg-emerald-100 w-72 h-72 shadow-2xl rounded-2xl p-3 hover:scale-105 duration-300 flex flex-col gap-1.5;
+  @apply bg-emerald-100 w-72 h-100 shadow-2xl rounded-2xl p-3 hover:scale-105 duration-300 flex flex-col gap-1.5;
 }
