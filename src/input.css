@@ -85,6 +85,3 @@
   transform: translateX(0);
 }
 
-.overhidden{
-  @apply overflow-hidden;
-}
