@@ -1,20 +1,28 @@
 const menuBtn = document.getElementById("menu");
 const mobileMenu = document.getElementById("mobile-menu");
-const header = document.querySelector("header");
 const body = document.querySelector("body");
 
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("open");
-  header.classList.remove("overflow-hidden");
-  body.classList.add("overhidden");
+let isOpen = false;
+
+function openMenu() {
+  isOpen = true;
+  mobileMenu.classList.add("open");
+  body.classList.add("overflow-hidden");
+}
+
+function closeMenu() {
+  isOpen = false;
+  mobileMenu.classList.remove("open");
+  body.classList.remove("overflow-hidden");
+}
+
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  isOpen ? closeMenu() : openMenu();
 });
 
 document.addEventListener("click", (e) => {
-  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-    mobileMenu.classList.remove("open");
-    setTimeout(() => {
-      header.classList.remove("overflow-hidden");
-    }, 300);
-    body.classList.remove("overhidden");
-  }
+  if (!isOpen) return;
+  if (mobileMenu.contains(e.target)) return;
+  closeMenu();
 });
