@@ -6,55 +6,79 @@
     <link href="src/output.css" rel="stylesheet" />
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  <body class="bg-zinc-50">
+  <body class="bg-zinc-50 text-gray-900">
     <header
-      class="bg-emerald-50 sticky top-0 shadow-slate-200/50 border border-slate-100/50"
+      class="bg-emerald-50 sticky top-0 shadow-slate-200/50 z-50 border overflow-hidden border-slate-100/50"
     >
       <nav class="flex justify-around p-3 items-center backdrop-blur-md">
         <h1>
           <span class="font-bold text-xl">Adinda</span>
           <span class="font-bold etxt text-celadon-400">Portfolio</span>
         </h1>
-        <ul class="gap-4 text-shadow-sm hidden sm:flex">
-          <li>
-            <a class="a-nav-hover" href="#about">About</a>
-          </li>
+        <ul class="gap-4 hidden sm:flex">
+          <li><a class="a-nav-hover" href="#about">About</a></li>
           <li><a class="a-nav-hover" href="#skills">Skills</a></li>
           <li><a class="a-nav-hover" href="#projects">Projects</a></li>
           <li><a class="a-nav-hover" href="#contact">Contact</a></li>
         </ul>
 
-        <i data-feather="menu" class="text-black flex sm:hidden"></i>
+        <!-- Mobile menu (sidebar) -->
+        <ul id="mobile-menu" class="mobile-menu sm:hidden">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <i id="menu" data-feather="menu" class="text-black flex sm:hidden"></i>
       </nav>
     </header>
 
     <section
-      class="bg-emerald-50 rounded-bl-4xl rounded-br-4x px-15 py-16 flex flex-col md:flex md:flex-row items-center md:items-center justify-center gap-10 sm:gap-60"
+      class="bg-emerald-50 rounded-bl-4xl rounded-br-4x p-13 flex flex-col md:flex md:flex-row items-center md:items-center justify-center gap-10 sm:gap-60"
       id="hero"
     >
-      <div>
+      <div class="flex flex-col gap-2">
         <h2 class="text-5xl font-bold">Hello, I'm Adinda</h2>
-        <p class="text-3xl font-bold text-shamrock-400">
-          Data Analyst | Data Enthusiast
+        <p class="text-xl font-bold text-shamrock-400">
+          Aspiring Data Analyst & Web Developer |
         </p>
-        <a
-          class="inline-block mt-3 bg-emerald-200 p-3 rounded-2xl text-sm font-bold shadow-sm hover:scale-105 duration-300"
-          href="#projects"
-          >View My Work</a
-        >
+        <p class="text-xl font-bold text-shamrock-400">
+          Open to Internship & Entry-Level Opportunities
+        </p>
+        <p>
+          <a
+            class="inline-block mt-3 bg-emerald-200 p-3 rounded-2xl text-sm font-bold shadow-sm hover:scale-105 duration-300"
+            href="#projects"
+            >View My Work</a
+          >
+        </p>
         <div class="flex gap-4 mt-5">
-          <i
-            data-feather="linkedin"
-            class="cursor-pointer drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] hover:scale-105 duration-300"
-          ></i>
-          <i
-            data-feather="instagram"
-            class="cursor-pointer drop-shadow-[0_0_8px_rgba(59,130,246,0.8)] hover:scale-105 duration-300"
-          ></i>
-          <i
-            data-feather="github"
-            class="cursor-pointer drop-shadow-[0_0_8px_rgba(59,130,246,0.8)] hover:scale-105 duration-300"
-          ></i>
+          <a
+            href="https://www.linkedin.com/in/adinda-puja-puspita/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i
+              data-feather="linkedin"
+              class="cursor-pointer drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] hover:scale-105 duration-300"
+            ></i
+          ></a>
+          <a
+            href="https://www.instagram.com/ppadinda/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              data-feather="instagram"
+              class="cursor-pointer drop-shadow-[0_0_8px_rgba(59,130,246,0.8)] hover:scale-105 duration-300"
+            ></i>
+          </a>
+          <a href="https://github.com/eelkrammm"
+            ><i
+              data-feather="github"
+              class="cursor-pointer drop-shadow-[0_0_8px_rgba(59,130,246,0.8)] hover:scale-105 duration-300"
+            ></i
+          ></a>
         </div>
       </div>
 
@@ -132,6 +156,14 @@
         <img class="w-15 h-15" src="skills/rstudioide.svg" alt="r-studio" />
         <img class="w-15 h-15" src="skills/python.svg" alt="python" />
         <img class="w-15 h-15" src="skills/looker.svg" alt="google-looker" />
+        <img class="w-15 h-15" src="skills/html5.svg" alt="html" />
+        <img class="w-15 h-15" src="skills/css.svg" alt="css" />
+        <img
+          class="w-15 h-15"
+          src="skills/tailwindcss.svg"
+          alt="tailwind.css"
+        />
+        <img class="w-15 h-15" src="skills/javascript.svg" alt="javascript" />
       </div>
     </section>
 
@@ -139,10 +171,10 @@
       id="projects"
       class="flex flex-col sm:flex-wrap justify-center items-center gap-10 p-15 bg-[url('layered-waves-haikei.png')] bg-cover bg-center"
     >
-      <h2 class="text-4xl font-bold text-center">Projects</h2>
+      <h2 class="text-4xl font-bold text-center">Data Projects</h2>
       <div class="projects flex gap-5 flex-wrap justify-center items-center">
         <div class="project">
-          <img src="grafik_ta.png" class="rounded-sm shadow-sm h-1/2" />
+          <img src="image/grafik_ta.png" class="rounded-sm shadow-sm h-1/2" />
           <p
             class="title-project text-sm font-semibold text-justify mt-3 cursor-pointer"
           >
@@ -167,12 +199,13 @@
           </p>
         </div>
         <div class="project">
-          <img src="foto-arima.png" class="rounded-sm shadow-sm h-1/2" />
+          <img src="image/foto-arima.png" class="rounded-sm shadow-sm h-1/2" />
           <p
             class="title-project text-sm font-semibold text-justify mt-3 cursor-pointer"
           >
             Application Of The Autoregressive Integrated Moving Average (ARIMA)
-            Method in Forecasting Mandatory Contributtions To Traffic Accident Funds In Bojonegoro Regency Roads
+            Method in Forecasting Mandatory Contributtions To Traffic Accident
+            Funds In Bojonegoro Regency Roads
           </p>
           <div class="text-[10px] flex flex-row flex-wrap gap-2 items-center">
             <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
@@ -192,9 +225,93 @@
           </p>
         </div>
       </div>
+
+      <h2 class="text-4xl font-bold text-center">Website Projects</h2>
+      <div class="projects flex gap-5 flex-wrap justify-center items-center">
+        <div class="project">
+          <img
+            src="image/drum-machine.png"
+            class="rounded-sm shadow-sm h-1/2 object-cover"
+          />
+          <p
+            class="title-project text-sm font-semibold text-justify mt-3 cursor-pointer"
+          >
+            [freeCodeCamp Project] Build a Drum Machine
+          </p>
+          <div class="text-[10px] flex flex-row flex-wrap gap-2 items-center">
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >HTML</span
+            >
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >Tailwind CSS</span
+            >
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >JavaScript</span
+            >
+          </div>
+          <p
+            class="text-sm cursor-pointer font-semibold text-blue-800 hover:underline hover:underline-offset-4"
+          >
+            <a href="https://github.com/eelkrammm/drum-machine-fcc"
+              >Read More</a
+            >
+          </p>
+          <p
+            class="text-sm cursor-pointer font-semibold text-blue-800 hover:underline hover:underline-offset-4"
+          >
+            <a href="https://eelkrammm.github.io/drum-machine-fcc/"
+              >Visit The Website</a
+            >
+          </p>
+        </div>
+        <div class="project">
+          <img
+            src="image/boorkmark-manager.png"
+            class="rounded-sm shadow-sm h-1/2"
+          />
+          <p
+            class="title-project text-sm font-semibold text-justify mt-3 cursor-pointer"
+          >
+            [freeCodeCamp Project] Build a Bookmark Manager App
+          </p>
+          <div class="text-[10px] flex flex-row flex-wrap gap-2 items-center">
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >HTML</span
+            >
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >CSS</span
+            >
+            <span class="bg-emerald-300 backdrop-blur-md rounded-3xl p-1"
+              >JavaScript</span
+            >
+          </div>
+          <p
+            class="text-sm cursor-pointer font-semibold text-blue-800 hover:underline hover:underline-offset-4"
+          >
+            <a
+              href="https://github.com/eelkrammm/freecodecamp-build-a-bookmark-manager-app"
+              >Read More</a
+            >
+          </p>
+          <p
+            class="text-sm cursor-pointer font-semibold text-blue-800 hover:underline hover:underline-offset-4"
+          >
+            <a
+              href="https://eelkrammm.github.io/freecodecamp-build-a-bookmark-manager-app/"
+              >Visit The Website</a
+            >
+          </p>
+        </div>
+      </div>
     </section>
+    <footer class="bg-emerald-50 p-5 flex justify-center items-center">
+      <p class="text-xl font-semibold text-center">
+        © 2026 Adinda Puja Puspita. All rights reserved.
+      </p>
+    </footer>
     <script>
       feather.replace();
     </script>
+    <script src="script.js"></script>
   </body>
 </html>
