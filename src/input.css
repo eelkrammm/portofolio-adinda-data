@@ -1,65 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* Celadon */
-  --color-celadon-50: #edf8f1;
-  --color-celadon-100: #daf1e3;
-  --color-celadon-200: #b6e2c8;
-  --color-celadon-300: #91d4ac;
-  --color-celadon-400: #6cc690;
-  --color-celadon-500: #47b874;
-  --color-celadon-600: #39935d;
-  --color-celadon-700: #2b6e46;
-  --color-celadon-800: #1d492f;
-  --color-celadon-900: #0e2517;
-  --color-celadon-950: #0a1a10;
-
-  /* Aquamarine */
-  --color-aquamarine-50: #e5fff4;
-  --color-aquamarine-100: #ccffe9;
-  --color-aquamarine-200: #99ffd3;
-  --color-aquamarine-300: #66ffbd;
-  --color-aquamarine-400: #33ffa7;
-  --color-aquamarine-500: #00ff91;
-  --color-aquamarine-600: #00cc74;
-  --color-aquamarine-700: #009957;
-  --color-aquamarine-800: #00663a;
-  --color-aquamarine-900: #00331d;
-  --color-aquamarine-950: #002414;
-
-  /* Emerald */
-  --color-emerald-50: #ebfaf1;
-  --color-emerald-100: #d6f5e4;
-  --color-emerald-200: #aeeac9;
-  --color-emerald-300: #85e0ae;
-  --color-emerald-400: #5dd593;
-  --color-emerald-500: #34cb78;
-  --color-emerald-600: #2aa260;
-  --color-emerald-700: #1f7a48;
-  --color-emerald-800: #155130;
-  --color-emerald-900: #0a2918;
-  --color-emerald-950: #071c11;
-
-  /* Shamrock */
-  --color-shamrock-50: #eef6f1;
-  --color-shamrock-100: #ddeee3;
-  --color-shamrock-200: #bbddc6;
-  --color-shamrock-300: #99ccaa;
-  --color-shamrock-400: #77bb8e;
-  --color-shamrock-500: #55aa71;
-  --color-shamrock-600: #44885b;
-  --color-shamrock-700: #336644;
-  --color-shamrock-800: #22442d;
-  --color-shamrock-900: #112217;
-  --color-shamrock-950: #0c1810;
+  --color-shamrock-400: #f472b6;
+  --color-celadon-400: #ec4899;
 }
 
-.a-nav-hover {
-  @apply hover:text-celadon-400 relative inline-block pb-1 after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-celadon-400 after:left-0 after:bottom-0 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100;
+@layer components {
+  .a-nav-hover {
+    @apply hover:text-pink-400 transition-colors duration-200;
+  }
 }
 
 .project {
-  @apply bg-emerald-100 w-72 h-100 shadow-2xl rounded-2xl p-3 hover:scale-105 duration-300 flex flex-col gap-1.5;
+  @apply bg-pink-100/70 backdrop-blur-md rounded-2xl shadow-md p-4 flex flex-col gap-2 w-72;
+}
+
+.project img {
+  @apply w-full h-48 object-cover rounded-xl;
+}
+
+.projects {
+  @apply items-stretch;
+}
+
+.title-project {
+  @apply hover:text-pink-500 transition-colors duration-200;
 }
 
 .mobile-menu {
@@ -70,11 +35,6 @@
   transform: translateX(100%);
 }
 
-.mobile-menu {
-  @apply flex flex-col gap-2 px-10 py-5 text-xl font-semibold fixed top-0 right-0 
-         bg-zinc-50 shadow-lg transition-transform duration-300 z-99 h-screen w-64 translate-x-full invisible;
-}
-
 .mobile-menu.open {
   @apply visible;
   transform: translateX(0);
@@ -82,5 +42,4 @@
 
 .overflow-x-hidden {
   overflow-x: hidden;
-  
 }
