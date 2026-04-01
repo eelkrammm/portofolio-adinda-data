@@ -1,8 +1,8 @@
 const menuBtn = document.getElementById("menu");
 const mobileMenu = document.getElementById("mobile-menu");
-const header = document.querySelector("header");
 const body = document.querySelector("body");
 let isMenuOpen = false;
+
 
 function open() {
   isMenuOpen = true;
@@ -31,4 +31,5 @@ document.addEventListener("click", (e) => {
     close(e);
     console.log(isMenuOpen);
   }
+
 });
