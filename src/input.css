@@ -70,21 +70,15 @@
   transform: translateX(100%);
 }
 
-
-
-
-.mobile-menu{
+.mobile-menu {
   @apply flex flex-col gap-2 px-10 py-5 text-xl font-semibold fixed top-0 right-0 
-         bg-zinc-50 shadow-lg transition-transform duration-300 z-99;
-  height: 100vh;
-  width: 16rem;
-  transform: translateX(100%);
+         bg-zinc-50 shadow-lg transition-transform duration-300 z-99 h-screen w-64 translate-x-full;
 }
 
 .mobile-menu.open {
   transform: translateX(0);
 }
 
-.overhidden{
-  @apply overflow-hidden;
+.no-scroll {
+  overflow: hidden;
 }

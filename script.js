@@ -2,19 +2,35 @@ const menuBtn = document.getElementById("menu");
 const mobileMenu = document.getElementById("mobile-menu");
 const header = document.querySelector("header");
 const body = document.querySelector("body");
+let isMenuOpen = false;
 
-menuBtn.addEventListener("click", () => {
+function open() {
+  isMenuOpen = true;
   mobileMenu.classList.toggle("open");
-  header.classList.remove("overflow-hidden");
   body.classList.add("overhidden");
-});
+  header.classList.remove("overflow-hidden");
+}
 
-document.addEventListener("click", (e) => {
+function close(e) {
   if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
     mobileMenu.classList.remove("open");
     setTimeout(() => {
-      header.classList.remove("overflow-hidden");
+      header.classList.add("overflow-hidden");
     }, 300);
-    body.classList.remove("overhidden");
+    isMenuOpen = false;
+  }
+}
+
+menuBtn.addEventListener("click", () => {
+  open();
+  console.log(isMenuOpen);
+});
+
+document.addEventListener("click", (e) => {
+  if (isMenuOpen === false) {
+    return;
+  } else {
+    close(e);
+    console.log(isMenuOpen);
   }
 });
