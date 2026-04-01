@@ -72,13 +72,16 @@
 
 .mobile-menu {
   @apply flex flex-col gap-2 px-10 py-5 text-xl font-semibold fixed top-0 right-0 
-         bg-zinc-50 shadow-lg transition-transform duration-300 z-99 h-screen w-64 translate-x-full;
+         bg-zinc-50 shadow-lg transition-transform duration-300 z-99 h-screen w-64 translate-x-full invisible;
 }
 
 .mobile-menu.open {
+  @apply visible;
   transform: translateX(0);
 }
 
-.no-scroll {
-  overflow: hidden;
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+  
 }

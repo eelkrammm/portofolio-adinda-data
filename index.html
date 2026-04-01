@@ -1,14 +1,15 @@
 <!doctype html>
-<html class="overflow-x-hidden">
+<html style="overflow-x: hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/output.css" rel="stylesheet" />
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  <body class="bg-zinc-50 text-gray-900 overflow-x-hidden">
+  <body class="bg-zinc-50 text-gray-900" style="overflow-x: hidden;">
     <header
-      class="bg-emerald-50 sticky top-0 shadow-slate-200/50 z-50 border overflow-hidden border-slate-100/50"
+      class="bg-emerald-50 sticky top-0 shadow-slate-200/50 z-50 border border-slate-100/50"
+      style="overflow-x: hidden"
     >
       <nav class="flex justify-around p-3 items-center backdrop-blur-md">
         <h1>
@@ -22,18 +23,16 @@
           <li><a class="a-nav-hover" href="#contact">Contact</a></li>
         </ul>
 
-        <!-- Mobile menu (sidebar) -->
-        <ul id="mobile-menu" class="mobile-menu sm:hidden">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
         <i id="menu" data-feather="menu" class="text-black flex sm:hidden"></i>
       </nav>
     </header>
-
+    <!-- Mobile menu (sidebar) -->
+    <ul id="mobile-menu" class="mobile-menu sm:hidden">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
     <section
       class="bg-emerald-50 rounded-bl-4xl rounded-br-4x p-13 flex flex-col md:flex md:flex-row items-center md:items-center justify-center gap-10 sm:gap-60"
       id="hero"
@@ -145,7 +144,7 @@
         d="M0,256L84.7,288L169.4,192L254.1,32L338.8,0L423.5,288L508.2,96L592.9,32L677.6,224L762.4,160L847.1,160L931.8,160L1016.5,192L1101.2,160L1185.9,224L1270.6,256L1355.3,64L1440,0L1440,0L1355.3,0L1270.6,0L1185.9,0L1101.2,0L1016.5,0L931.8,0L847.1,0L762.4,0L677.6,0L592.9,0L508.2,0L423.5,0L338.8,0L254.1,0L169.4,0L84.7,0L0,0Z"
       ></path>
     </svg>
-    <section class="flex flex-col gap-10 px-15" id="technical-skill">
+    <section id="skills" class="flex flex-col gap-10 px-15" id="technical-skill">
       <h2 class="text-4xl text-center font-bold">Technical Skills</h2>
       <p class="text-small text-center">
         Here are some of the tools and technologies I use in data analysis,

@@ -7,15 +7,13 @@ let isMenuOpen = false;
 function open() {
   isMenuOpen = true;
   mobileMenu.classList.toggle("open");
-  body.classList.add("overhidden");
-  header.classList.remove("overflow-hidden");
 }
 
 function close(e) {
   if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
     mobileMenu.classList.remove("open");
     setTimeout(() => {
-      header.classList.add("overflow-hidden");
+      header.classList.add("overflow-x-hidden");
     }, 300);
     isMenuOpen = false;
   }
