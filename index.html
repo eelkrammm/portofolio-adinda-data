@@ -1,5 +1,5 @@
 <!doctype html>
-<html style="overflow-x: hidden">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +7,9 @@
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
 
-  <body class="bg-zinc-50 text-gray-900 overflow-x-hidden">
+  <body class="bg-zinc-50 text-gray-900">
     <header
-      class="bg-pink-50 sticky top-0 shadow-slate-200/50 z-50 overflow-x-hidden border border-slate-100/50"
+      class="bg-pink-50 sticky top-0 shadow-slate-200/50 z-[999999] overflow-x-hidden border border-slate-100/50"
     >
       <nav class="flex justify-around p-3 items-center backdrop-blur-md">
         <h1>
@@ -27,12 +27,13 @@
       </nav>
     </header>
     <!-- Mobile menu (sidebar) -->
-    <ul id="mobile-menu" class="mobile-menu sm:hidden">
+    <section id="mobile-menu" class="mobile-menu sm:hidden overflow-x-hidden"><ul  >
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
-    </ul>
+    </ul></section>
+    
     <section
       class="bg-pink-50 rounded-bl-4xl rounded-br-4x p-13 flex flex-col md:flex md:flex-row items-center md:items-center justify-center gap-10 sm:gap-60"
       id="hero"
