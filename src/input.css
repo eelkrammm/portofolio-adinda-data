@@ -43,3 +43,39 @@
 .overflow-x-hidden {
   overflow-x: hidden;
 }
+
+.cert-card{
+  @apply p-5 bg-pink-100/70 w-64 md:w-2xl flex flex-col md:flex-row gap-10 rounded-md shadow-md 
+}
+
+.certification-image{
+  @apply w-full
+}
+
+#certifications-wrapper{
+  @apply flex flex-col justify-center items-center gap-10 
+}
+
+#certifications{
+  @apply p-10 flex flex-col justify-center items-center
+}
+
+.cert-title-wrapper{
+  @apply flex flex-col gap-5
+}
+
+.cert-title{
+  @apply text-2xl font-bold text-gray-900
+}
+
+.cert-issuer{
+  @apply text-xl font-semibold underline underline-offset-4 text-rose-500
+}
+
+.key-learning{
+  @apply text-2xl font-bold text-gray-900
+}
+
+.credential{
+  @apply text-lg font-semibold underline underline-offset-4 text-blue-950 cursor-pointer
+}
